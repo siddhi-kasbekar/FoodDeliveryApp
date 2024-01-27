@@ -15,7 +15,7 @@ public class MenuItems {
 	
 
 	    @Id
-	    private Long id;
+	    private Long menuitemId;
 
 	    private String itemName;
 

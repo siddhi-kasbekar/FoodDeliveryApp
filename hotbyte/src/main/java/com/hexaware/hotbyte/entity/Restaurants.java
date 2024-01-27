@@ -34,11 +34,9 @@ public class Restaurants {
 	private Set<MenuItems> menuItemSet = new HashSet<MenuItems>(); // collections should be initialized to avoid nullPoitner Escep
 
     @OneToMany(mappedBy = "restaurant", cascade = CascadeType.ALL)
-    @JoinColumn(name = "resId")
     private Set<Orders> orderSet = new HashSet<Orders>();
     
     @OneToMany(mappedBy = "restaurant",cascade = CascadeType.ALL)
-    @JoinColumn(name = "resId")
     private Set<Discount> discountSet = new HashSet<Discount>() ;
 
 

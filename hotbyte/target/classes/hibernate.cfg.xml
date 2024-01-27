@@ -19,6 +19,17 @@
 		<mapping class="com.hexaware.hotbyte.entity.Customers" />
 		<mapping class="com.hexaware.hotbyte.entity.DeliveryAddress" />
 		
+		<mapping class="com.hexaware.hotbyte.entity.Administrator" />
+		<mapping class="com.hexaware.hotbyte.entity.Cart" />
+		<mapping class="com.hexaware.hotbyte.entity.Discount" />
+		<mapping class="com.hexaware.hotbyte.entity.MenuItems" />
+		<mapping class="com.hexaware.hotbyte.entity.OrderDetails" />
+		<mapping class="com.hexaware.hotbyte.entity.Orders" />
+		<mapping class="com.hexaware.hotbyte.entity.Payment" />
+		<mapping class="com.hexaware.hotbyte.entity.Restaurants" />
+		
+		
+		
 
 
 	</session-factory>

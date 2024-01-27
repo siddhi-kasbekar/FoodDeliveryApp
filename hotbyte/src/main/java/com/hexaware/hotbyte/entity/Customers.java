@@ -27,15 +27,12 @@ public final class Customers {
 	private DeliveryAddress address;
 	
 	 @OneToMany(mappedBy = "customer", cascade = CascadeType.ALL)
-	@JoinColumn(name= "customerId")
 	 private Set<Orders> orderSet= new HashSet<>();
 	 
 	 @OneToMany(mappedBy = "customer",cascade = CascadeType.ALL)
-	 @JoinColumn(name= "customerId")
 	    private Set<Payment> paymentSet = new HashSet<>(); 
 
 	    @OneToOne(mappedBy = "customer",cascade = CascadeType.ALL)
-	    @JoinColumn(name= "customerId")
 	    private Cart cart;
 
 	public Customers() {

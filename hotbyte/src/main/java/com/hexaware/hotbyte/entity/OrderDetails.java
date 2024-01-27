@@ -4,10 +4,12 @@ import java.awt.MenuItem;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
+@Entity
 public class OrderDetails {
 	@Id
     @Column(name = "OrderDetailID")
@@ -19,7 +21,7 @@ public class OrderDetails {
 
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "MenuID")
-    private MenuItem menuItem;
+    private MenuItems menuItem;
 
     private int quantity;
 
