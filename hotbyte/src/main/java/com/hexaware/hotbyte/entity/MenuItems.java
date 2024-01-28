@@ -7,8 +7,10 @@ import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+
 
 @Entity
 public class MenuItems {
@@ -46,6 +48,9 @@ public class MenuItems {
 		@ManyToOne(cascade = CascadeType.ALL)
 	    @JoinColumn(name = "CartID")
 	    private Cart cart;
+		
+		@ManyToMany(mappedBy = "menuItems")
+	    private Set<Orders> orders = new HashSet<>();
 
 
 

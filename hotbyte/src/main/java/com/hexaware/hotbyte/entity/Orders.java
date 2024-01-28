@@ -2,13 +2,17 @@ package com.hexaware.hotbyte.entity;
 
 import java.math.BigDecimal;
 import java.sql.Timestamp;
+import java.util.HashSet;
+import java.util.Set;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
+
 
 @Entity
 public class Orders {
@@ -37,6 +41,9 @@ public class Orders {
 	@ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "resId")
     private Restaurants restaurant;
+	
+	@ManyToMany(cascade = CascadeType.ALL)
+    private Set<MenuItems> menuItems = new HashSet<>();
 	
 
 }
