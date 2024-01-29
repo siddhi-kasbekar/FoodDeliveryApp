@@ -25,4 +25,24 @@ public class OrderDetails {
 
     private int quantity;
 
+	public OrderDetails() {
+		super();
+	}
+
+	public OrderDetails(int orderDetailId, Orders order, MenuItems menuItem, int quantity) {
+		super();
+		this.orderDetailId = orderDetailId;
+		this.order = order;
+		this.menuItem = menuItem;
+		this.quantity = quantity;
+	}
+
+	@Override
+	public String toString() {
+		return "OrderDetails [orderDetailId=" + orderDetailId + ", order=" + order + ", menuItem=" + menuItem
+				+ ", quantity=" + quantity + "]";
+	}
+
+    
+    
 }
